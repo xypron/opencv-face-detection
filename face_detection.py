@@ -102,20 +102,20 @@ class LiveFaceDetection:
             # Edited Frames
             small_frame = FrameEditing.scale_frame(frame, 0.5, 0.5)  # Make original frame smaller by half
             # Please uncomment one or both of this if you want to use it
-            # hsv_frame = FrameEditing.convert_frame_to_hsv(small_frame)  # Convert BGR color into HSV color
-            # gray_frame = FrameEditing.convert_frame_to_gray(small_frame)  # Convert BGR color into Gray scale color
+            hsv_frame = FrameEditing.convert_frame_to_hsv(small_frame)  # Convert BGR color into HSV color
+            gray_frame = FrameEditing.convert_frame_to_gray(small_frame)  # Convert BGR color into Gray scale color
 
             # Get video width and height ~ Please uncomment this if you want to see fur frame in one
-            # width, height = FindValues.get_frame_width_height(frame)
+            width, height = FindValues.get_frame_width_height(frame)
 
             # Show certain colors that you want ~ Please uncomment this if you want to see only the skin color in the frame
-            # skin_color = FrameEditing.show_skin_color(small_frame, hsv_frame, [0, 58, 30], [33, 255, 255])
+            skin_color = FrameEditing.show_skin_color(small_frame, hsv_frame, [0, 58, 30], [33, 255, 255])
 
             # Face & Eye detection
             FaceDetection.face_detection(small_frame, face_cascade, scale_factor=1.2, min_neighbors=5, line_thickness=2)
 
             # Combine frame ~ Please uncomment one of this if you want to see two or fur frame in one
-            # two_frame_combined = FrameEditing.combine_two_frame(small_frame, skin_color)  # Show two frame next to each other horizontally
+            two_frame_combined = FrameEditing.combine_two_frame(small_frame, skin_color)  # Show two frame next to each other horizontally
             # four_frame_combine = FrameEditing.combine_four_frame(frame, width, height, small_frame, hsv_frame, skin_color, gray_frame)
 
             # Load video frame ~ Please put here the frame that you will like to see
