@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Import libraries
 import cv2
 from config.frame_drawing import FrameDrawing
@@ -11,8 +13,8 @@ class FindValues:
     def get_frame_width_height(frame):
         # Return width and height
         return frame.shape[1], frame.shape[0]
-    
-    
+
+
 # This is the class that contain the face detection algorithm
 class FaceDetection:
     # Face detection ~ Detect human face
@@ -63,7 +65,7 @@ class FaceDetection:
             FrameDrawing.draw_text(frame, 'Coordinate: {} - Size: {}'.format((x, y), (w, h)), (width // 25, height // 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 1)
 
 
-# This is the Main Class ~ This class will show you the Video Frame with the live face detection 
+# This is the Main Class ~ This class will show you the Video Frame with the live face detection
 class LiveFaceDetection:
     def __init__(self):
         # Live face detection
