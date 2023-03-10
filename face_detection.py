@@ -92,7 +92,7 @@ class LiveFaceDetection:
 
         # Load face detection classifier ~ I put this here because I didn't want to load it everytime I run the FaceDetection class
         # Load face detection classifier ~ Path to face & eye cascade
-        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")  # Pre train model
+        face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")  # Pre train model
 
         while True:
 
