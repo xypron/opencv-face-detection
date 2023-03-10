@@ -4,6 +4,7 @@
 import cv2
 from config.frame_drawing import FrameDrawing
 from config.frame_editing import FrameEditing
+import os
 
 
 # This is just a class to find the width and height of the frame
@@ -94,7 +95,8 @@ class LiveFaceDetection:
 
         # Load face detection classifier ~ I put this here because I didn't want to load it everytime I run the FaceDetection class
         # Load face detection classifier ~ Path to face & eye cascade
-        face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")  # Pre train model
+        face_cascade = cv2.CascadeClassifier(os.path.dirname(__file__) +
+            "/haarcascade_frontalface_default.xml")  # Pre-trained model
 
         while True:
 
