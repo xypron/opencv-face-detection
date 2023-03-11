@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Face Detection
+Comment=OpenCV Demo
+Keywords=opencv;
+Exec=/opt/opencv-face-detection/face_detection.py
+Terminal=false
+Type=Application
+Icon=/opt/opencv-face-detection/logo.png
+Categories=Development;
